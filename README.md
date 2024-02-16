@@ -1,5 +1,5 @@
 # Farm Game
-This game is a course project that was written in C++ programming language and QT framework. It is important to note that you should rewrite the path of the database, flags of countries, and pictures.
+This game is a course project that was written in C++ programming language and QT framework. It is important to note that you should rewrite the path of the database, flags of countries, and pictures based on your local directory.
 In this game, several users can register just one time, grow animals and vegetables on their farms, and make money. 
 If new users want to join, you should remove all the users who already registered and then register all users.  
 
