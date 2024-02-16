@@ -310,9 +310,9 @@ void Login::initDB()
     QSqlDatabase db;
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/Seyyed Javad Razavi/Desktop/game/uni_game.db");
+    db.setDatabaseName("../uni_game.db");
     if(!db.open())
-        QMessageBox::warning(nullptr,"Database","Could not connect to database");
+        QMessageBox::warning(nullptr, "Database", "Could not connect to database");
 }
 
 void Login::on_spinBox_valueChanged()
