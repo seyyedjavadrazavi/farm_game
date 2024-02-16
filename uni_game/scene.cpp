@@ -38,7 +38,7 @@ scene::scene(int number_of_players, QList<QString> user_name_lst) :
 {
     ui->setupUi(this);
 
-    QPixmap bkgnd("C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/scene.jpg");
+    QPixmap bkgnd("icons/scene.jpg");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Window, bkgnd);
@@ -117,10 +117,10 @@ void scene::select_bttn(QPushButton *button, int i, int j)
             boarder[i][j] = 2;
             coins -= 7;
             ui -> lbl_coins->setText("Coins: " + QString::number(coins));
-            button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/cow.png);");
+            button -> setStyleSheet("border-image:url(icons/cow.png);");
 
             m_player = new QMediaPlayer();
-            m_player -> setMedia(QUrl("C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/cow.mp3"));
+            m_player -> setMedia(QUrl("icons/cow.mp3"));
             m_player -> play();
         }
         else if (rd_btn_slction() == 3)
@@ -128,10 +128,10 @@ void scene::select_bttn(QPushButton *button, int i, int j)
             boarder[i][j] = 3;
             coins -= 3;
             ui -> lbl_coins->setText("Coins: " + QString::number(coins));
-            button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/hen.png);");
+            button -> setStyleSheet("border-image:url(icons/hen.png);");
 
             m_player = new QMediaPlayer();
-            m_player -> setMedia(QUrl("C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/hen.mp3"));
+            m_player -> setMedia(QUrl("icons/hen.mp3"));
             m_player -> play();
         }
         else if (rd_btn_slction() == 4)
@@ -139,10 +139,10 @@ void scene::select_bttn(QPushButton *button, int i, int j)
             boarder[i][j] = 4;
             coins -= 5;
             ui -> lbl_coins->setText("Coins: " + QString::number(coins));
-            button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/shep.png);");
+            button -> setStyleSheet("border-image:url(icons/shep.png);");
 
             m_player = new QMediaPlayer();
-            m_player -> setMedia(QUrl("C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/sheep.mp3"));
+            m_player -> setMedia(QUrl("icons/sheep.mp3"));
             m_player -> play();
         }
         else if (rd_btn_slction() == 5)
@@ -150,14 +150,14 @@ void scene::select_bttn(QPushButton *button, int i, int j)
             boarder[i][j] = 5;
             coins -= 2;
             ui -> lbl_coins->setText("Coins: " + QString::number(coins));
-            button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/jo.jpeg);");
+            button -> setStyleSheet("border-image:url(icons/jo.jpeg);");
         }
         else if (rd_btn_slction() == 6)
         {
             boarder[i][j] = 6;
             coins -= 2;
             ui -> lbl_coins->setText("Coins: " + QString::number(coins));
-            button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/wheat.jpeg);");
+            button -> setStyleSheet("border-image:url(icons/wheat.jpeg);");
         }
         else if (rd_btn_slction() == 7)
         {
@@ -307,7 +307,7 @@ void scene::select_bttn(QPushButton *button, int i, int j)
                 coins += prize;
                 ui -> lbl_coins -> setText("Coins: " + QString::number(coins));
                 boarder[i][j] = 2;
-                button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/cow.png);");
+                button -> setStyleSheet("border-image:url(icons/cow.png);");
             }
             else if(button->property("product") == "milk_shep")
             {
@@ -318,7 +318,7 @@ void scene::select_bttn(QPushButton *button, int i, int j)
                 coins += prize;
                 ui -> lbl_coins -> setText("Coins: " + QString::number(coins));
                 boarder[i][j] = 4;
-                button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/shep.png);");
+                button -> setStyleSheet("border-image:url(icons/shep.png);");
             }
             else if(button->property("product") == "egg")
             {
@@ -329,7 +329,7 @@ void scene::select_bttn(QPushButton *button, int i, int j)
                 coins += prize;
                 ui -> lbl_coins -> setText("Coins: " + QString::number(coins));
                 boarder[i][j] = 3;
-                button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/hen.png);");
+                button -> setStyleSheet("border-image:url(icons/hen.png);");
             }
             else if(button->property("product") == "grain_flour")
             {
@@ -340,7 +340,7 @@ void scene::select_bttn(QPushButton *button, int i, int j)
                 coins += prize;
                 ui -> lbl_coins -> setText("Coins: " + QString::number(coins));
                 boarder[i][j] = 0;
-//                button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/jo.jpeg);");
+//                button -> setStyleSheet("border-image:url(icons/jo.jpeg);");
                 button -> setStyleSheet(QString("QPushButton { background-color: white; }"));
             }
             else if(button->property("product") == "flour")
@@ -352,7 +352,7 @@ void scene::select_bttn(QPushButton *button, int i, int j)
                 coins += prize;
                 ui -> lbl_coins -> setText("Coins: " + QString::number(coins));
                 boarder[i][j] = 0;
-//                button -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/wheat.jpeg);");
+//                button -> setStyleSheet("border-image:url(icons/wheat.jpeg);");
                 button -> setStyleSheet(QString("QPushButton { background-color: white; }"));
             }
 
@@ -842,20 +842,20 @@ void scene::product_timer(QTimer *timer, QPushButton *button, QString product)
     {
         if (button->property("product") == "milk_cow")
         {
-            button -> setStyleSheet(QString("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/milk.png);"));
+            button -> setStyleSheet(QString("border-image:url(icons/milk.png);"));
         }
         else if (button->property("product") == "milk_shep")
         {
-            button -> setStyleSheet(QString("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/milk.png);"));
+            button -> setStyleSheet(QString("border-image:url(icons/milk.png);"));
         }
         else if(button->property("product") == "egg"){
-            button -> setStyleSheet(QString("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/egg.png);"));
+            button -> setStyleSheet(QString("border-image:url(icons/egg.png);"));
         }
         else if(button->property("product") == "grain_flour"){
-            button -> setStyleSheet(QString("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/grain_flour.jpg);"));
+            button -> setStyleSheet(QString("border-image:url(icons/grain_flour.jpg);"));
         }
         else if(button->property("product") == "flour"){
-            button -> setStyleSheet(QString("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/flour.png);"));
+            button -> setStyleSheet(QString("border-image:url(icons/flour.png);"));
         }
     }
     else if (remainingTime < 0)
@@ -955,7 +955,7 @@ void scene::initDB()
     QSqlDatabase db;
 
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Users/Seyyed Javad Razavi/Desktop/game/uni_game.db");
+    db.setDatabaseName("../uni_game.db");
     if(!db.open())
         QMessageBox::warning(nullptr,"Database","Could not connect to database");
 }
