@@ -51,7 +51,7 @@ string generateCaptcha(int n)
 void Login::printJsonData()
 {
 
-    QFile file("C:/Users/Seyyed Javad Razavi/Desktop/game/transformed_path_to_input_file.json");
+    QFile file("./transformed_path_to_input_file.json");
     if(!file.open(QIODevice::ReadOnly)) {
         QMessageBox::information(0, "error", file.errorString());
     }
@@ -90,7 +90,7 @@ void Login::printJsonData()
         if(st == 1)
         {
             QStringList path = img_path.split('"');
-            QString url = "C:/Users/Seyyed Javad Razavi/Desktop/game/flags/" + path[0];
+            QString url = "/flags/" + path[0];
             QPixmap img(url);
 
             name = name + ", +" + code;
@@ -133,7 +133,7 @@ Login::Login(int num) :
 
     printJsonData();
 
-    ui -> btn_show_hide_pass ->setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/show.jpg);");
+    ui -> btn_show_hide_pass ->setStyleSheet("border-image:url(./icons/show.jpg);");
 }
 
 Login::~Login()
@@ -287,13 +287,13 @@ void Login::show_hide_password()
 {
     if(show_pass)
     {
-        ui -> btn_show_hide_pass -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/show.jpg);");
+        ui -> btn_show_hide_pass -> setStyleSheet("border-image:url(./icons/show.jpg);");
         ui->pass->setEchoMode(QLineEdit::Password);
         show_pass = 0;
     }
     else
     {
-        ui -> btn_show_hide_pass -> setStyleSheet("border-image:url(C:/Users/Seyyed Javad Razavi/Desktop/game/Source/icons/hide.jpg);");
+        ui -> btn_show_hide_pass -> setStyleSheet("border-image:url(./icons/hide.jpg);");
         ui->pass->setEchoMode(QLineEdit::Normal);
         show_pass = 1;
     }
